@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ubuntu: 'Ubuntu', sans-serif;
+
+  --border-r: 8px;
+}
+
+/* -- Variables -- */
+/* Dark Mode - Base */
+:root {
+  --font-dark: #fff;
+  --bg-dark: #111;
+  --bg-card-dark: #331E38;
+}
+
+/* White Mode - Alternative */
+
+/* -- Ajustes -- */
+a {
+  color: var(--font-dark);
+}
+
+ul {
+  list-style: none;
+}
+
+
+body {
+  font-family: var(--ubuntu);
+  color: var(--font-dark);
+  background-color: var(--bg-dark);
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: clamp(17.5rem, 90%, 25rem);
+  overflow: hidden;
+  background-color: var(--bg-card-dark);
+  margin: 0 auto;
+  border-radius: var(--border-r);
+
+  .card__img {
+    width: 100%;
+    min-width: 280px;
+    height: 200px;
+    background-image: url('../img/ganana.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: var(--border-r);
+    border-top-right-radius: var(--border-r);
+  }
+
+  .card__texts {
+    padding: clamp(0.6rem, 5vw + 1rem, 1rem);
+  }
+
+  .card__title {
+    font-size: clamp(1.45rem, 2vw + 1rem, 1.85rem);
+    text-align: center;
+    margin-bottom: 1.15rem;
+  }
+
+  .card__paragraph {
+    font-size: clamp(1.0313rem, 2vw + 1rem, 1.0938rem);
+    text-align: center;
+    line-height: 1.45rem;
+    margin-bottom: .7rem;
+  }
+
+  .card__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card__item {
+    margin: 0 1rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      padding: .35rem;
+    }
+
+    i {
+      font-size: 1.65rem;
+      transition: transform 350ms,
+      color 850ms;
+    }
+
+    i:hover {
+      color: rgb(186, 55, 234);
+      transform: scale(1.45);
+    }
+  }
+}
